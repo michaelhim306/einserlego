@@ -1,22 +1,18 @@
-<html>
-  <head>
+<!DOCTYPE html>
+<html> <head>
     <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
-  </head>
+<title>IT Devices AR</title> </head>
   <body>
-      <a-scene arjs="debugUIEnabled: false">
-       <a-assets>
-        <a-asset-item
-          id="lego"
-          src="2026-05-13_ITDS_Lego-Teil_gemeinsam01_v2.glb">
-        </a-asset-item>
-      </a-assets>
-
-      <a-marker preset="hiro">
-         <a-entity gltf-model="#lego" scale="1 1 1" rotation="-90 -90 90"></a-entity>
-      </a-marker>
-      
-      <a-entity camera></a-entity>
-    </a-scene>
-   </body>
+  <a-scene arjs="debugUIEnabled: false">
+    <a-assets>
+	     <a-asset-item id="zweier"  src="https://cdn.glitch.com/bae316bf-d3f2-4d23-9543-d292c688692a%2Flego2er.gltf?v=1620724057963">
+            </a-asset-item>
+    </a-assets>    
+    <a-marker-camera preset="custom" type="pattern" url="lego-2er.gltf">
+      <a-entity gltf-model="#zweier"  scale="0.1 0.1 0.1" rotation="-90 -90 90"></a-entity>
+    </a-marker-camera>
+<a-entity camera></a-entity> 
+</a-scene>
+</body>
 </html>
